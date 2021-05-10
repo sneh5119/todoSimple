@@ -1,0 +1,39 @@
+<!-- <p>todo-list works!</p> -->
+
+
+  <div class="center">
+      <h2>Add Things to do </h2>
+      <input type="text" #box>
+      <button class="btn btn-primary" (click)="add(box.value)" id="addVal">Add Task</button>
+  </div>
+
+       
+    <div *ngFor="let todo of todos ;let i=index" class="row pCls" >
+
+        <div class="col-sm-2">
+            {{i+1}} 
+        </div>
+        
+          <div class="col-sm-4">
+            {{todo.description}}
+        </div>
+    
+       <div class="col-sm-5">
+        <button class="btn btn-success" (click)="edit(todo.id,todo.description)">
+            Edit
+        </button>
+
+        <button class="btn btn-danger" (click)="delete(todo.id,i)">Delete</button>
+        </div>
+          <!-- {{id}} -->
+        <div *ngIf="todo.id===id">
+        <input type="text"  [(ngModel)]="updatedVal">
+        <button class="btn btn-warning" (click)="update(i)">Update</button>
+        <a (click)="update(i)" class="closeCls" aria-label="Close">&#10006;</a>
+       </div>
+    
+
+    </div>
+    
+    
+

@@ -1,0 +1,24 @@
+
+button{
+    margin:3px;
+}
+
+
+.center{
+    margin-left:10px;
+}
+
+
+span{
+    margin:5px;
+}
+
+.pCls{
+    background-color: #e3e3ee;
+    width: 30%;
+    margin: 7px;
+}
+
+.closeCls{
+    cursor: pointer;
+}
